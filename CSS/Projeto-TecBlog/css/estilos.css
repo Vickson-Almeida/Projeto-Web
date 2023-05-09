@@ -22,21 +22,61 @@ body{
     padding: 10px;
 }
 
+#area-principal{
+    width: 920px;
+    margin: 0 auto;
+    padding:15px;    
+}
 
+#area-lateral{
+    background-color: white;
+}
+
+#area-postagens{
+    width: 660px;
+    float: left;
+}
+
+.postagem{
+    padding: 20px;
+    margin-bottom: 20px;    
+}
+
+#area-lateral{
+    width: 240px;
+    float: right;
+}
+
+#area-rodape{
+    clear: both;
+    text-align: center;
+    padding: 15px;
+    background-color: #ccc;
+}
 
 /*Formatação de link*/
 a{
     text-decoration: none;
 }
-a:link, a:visited{
+#area-cabecalho a:link, #area-cabecalho a:visited{
     color: white;
     padding: 8px 12px;
 }
 
-a:hover{
+#area-cabecalho a:hover{
     background-color: white;
     color: #f7b600;
+    text-decoration: none;
 }
+
+a:link, a:visited{
+    color: #f7b600;    
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
 
 
 /*formatação geral*/
@@ -45,6 +85,18 @@ h1{
     font-size: 2.5em;
 }
 
+h2{
+    color: #f7b600;    
+}
+
 .branco{
     color: white;
+}
+
+.data-postagem{
+    font-size: 0.8em;
+    border-bottom: 1px solid #f4f4f4;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    display: block;
 }
