@@ -3,3 +3,14 @@
 * @author Jamilton Damasceno
 */
 
+#menu{
+    background-color: red;     
+    padding:20px 15px; 
+    height: 200px;
+}
+
+#logo{  
+    background-color: blue;      
+    padding:20px 15px;     
+    height: 200px;
+}
