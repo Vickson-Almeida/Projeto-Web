@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Projeto Calculadora</title>
+
+  <style>
+    body{
+        background-color: #ddd;        
+    }
+
+    #topo{
+        background-color: #ccc;
+        color: #333;
+        text-align: center;
+        padding: 10px;
+        margin: 10px;
+    }
+
+    #topo h1{
+        font-family: Arial, Helvetica, sans-serif;
+        letter-spacing: 20px;
+
+    }
+
+    #topo input{
+        font-family: Arial, Helvetica, sans-serif;
+        letter-spacing: 10px;
+        padding: 15px;
+        width: 415px;
+    }
+
+    #botoes{
+        width: 500px;        
+        margin: 0 auto;
+    }
+
+    #botoes ul{
+        list-style: none;        
+    }
+
+    #botoes ul{
+        list-style: none;        
+    }
+
+    #botoes button{
+        width: 100px;
+        height: 100px;
+        margin: 0 5px 5px 0;
+        float: left;
+    }
+
+  </style>
+  <script>
+
+    var a = 0;
+    var b = 0;
+
+    var ope;
+
+    function adiciona(opcao){        
+        document.getElementById("painel").value += opcao;
+    }
+
+    function parcela_um(){
+        var numero = parseFloat(document.getElementById("painel").value);
+        a = numero
+        document.getElementById("painel").value = "";        
+        alert("Parcela 1 = " + a + "\nParcela 2 = " + b);
+    }
+
+    function parcela_dois(){
+        var numero = parseFloat(document.getElementById("painel").value);
+        b = numero
+        document.getElementById("painel").value = "";
+        alert("Parcela 1 = " + a + "\nParcela 2 = " + b);
+    }
+
+    function zerarMemoria(){
+        a = 0;
+        b = 0;
+        alert("Parcela 1 = " + a + "\nParcela 2 = " + b);
+    }
+
+    function efetuarCalculo(ope){
+        if(ope == '1'){
+            var resu = a + b;
+            alert(a + " + " + b + " = " + resu)
+        }
+        else if(ope == '2'){
+            var resu = a - b;
+            alert(a + " - " + b + " = " + resu)
+        }
+        else if(ope == '3'){
+            var resu = a * b;
+            alert(a + " * " + b + " = " + resu)
+        }
+        else if(ope == '4'){
+            var resu = a / b;
+            alert(a + " / " + b + " = " + resu)
+        }
+        else{
+            alert("Parametros Inválidos")
+        }
+    }
+
+  </script>
+</head>
+
+<body>
+    <header id="topo">
+        <div id="logo">
+            <h1>Calculadora</h1>
+        </div>
+        <input id="painel" type="text" disabled="disabled">
+    </header>
+    <nav id="container" class="row">
+        <div id="botoes">
+            <ul>
+                <li>
+                    <button type="button" onclick="adiciona('1')"> 1 </button>
+                </li>
+                <li>
+                    <button type="button" onclick="adiciona('2')"> 2 </button>
+                </li>
+                <li>
+                    <button type="button" onclick="adiciona('3')"> 3 </button>
+                </li>
+                <li>
+                    <button type="button" onclick="efetuarCalculo('1')"> + </button>
+                </li>
+                <li>
+                    <button type="button" onclick="adiciona('4')"> 4 </button>
+                </li>
+                <li>
+                    <button type="button" onclick="adiciona('5')"> 5 </button>
+                </li>
+                <li>
+                    <button type="button" onclick="adiciona('6')"> 6 </button>
+                </li>
+                <li>
+                    <button type="button" onclick="efetuarCalculo('2')"> - </button>
+                </li>
+                <li>
+                    <button type="button" onclick="adiciona('7')"> 7 </button>
+                </li>
+                <li>
+                    <button type="button" onclick="adiciona('8')"> 8 </button>
+                </li>
+                <li>
+                    <button type="button" onclick="adiciona('9')"> 9 </button>
+                </li>
+                <li>
+                    <button type="button" onclick="efetuarCalculo('3')"> * </button>
+                </li>
+                <li>
+                    <button type="button" onclick="adiciona('.')"> . </button>
+                </li>
+                <li>
+                    <button type="button" onclick="adiciona('0')"> 0 </button>
+                </li>
+                <li>
+                    <button type="button" onclick="adiciona('00')"> 00 </button>
+                </li>                
+                <li>
+                    <button type="button" onclick="efetuarCalculo('4')"> / </button>
+                </li>
+                <li>
+                    <button type="button" id="Memo1" onclick="parcela_um()"> Memoria 1 </button>
+                </li>
+                <li>
+                    <button type="button" id="Memo2" onclick="parcela_dois()"> Memoria 2 </button>
+                </li>
+                <li>
+                    <button type="button" onclick="zerarMemoria()"> Clear </button>
+                </li>     
+                <li>
+                    <button type="button"></button>
+                </li>                                 
+            </ul>
+        </div>
+    </nav>
+  
+</body>
+
+</html>
