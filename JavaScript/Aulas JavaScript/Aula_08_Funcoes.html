@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title> JavaScript Aula 08 - Funções</title>
+    </head>
+
+    <script>
+        var nome = "Funções"
+        var aula = 8
+        document.write("<h1> JavaScript Aula 0" + aula + " - " + nome + "</h1>")
+
+        //Função sem Retorno
+        function imprimirAreaNaTela(){
+            document.write("Area = " + calcularArea(10,30) + "metros quadrados")
+        }
+
+        //Função com Retorno
+        function calcularArea(largura, comprimento){
+            var area = largura * comprimento
+            return area
+        }
+
+        imprimirAreaNaTela()
+
+    </script> 
+
+    <body> 
+
+    </body>
+</html>
